@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.highlight-text::after {
+    @apply rounded-full bg-app-yellow -mt-2;
+    content: " ";
+    display: block;
+    width: 25%;
+    height: 0.5em;
+}
+
+[x-cloak] {
+    display: none;
+}

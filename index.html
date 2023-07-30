@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Load Font Start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Load Font End -->
+        <!-- Load Fav icon Start -->
+        <link rel="icon" type="image/png" href="./favicon-32x32.png" />
+        <!-- Load Fav icon End -->
+        <title>Vite App</title>
+    </head>
+    <body class="bg-[#3dbeff]">
+        <main class="md:max-w-7xl mx-auto" >
+            <header
+            class="h-24 p-6 flex justify-between items-center sticky top-0 z-50 bg-[#3dbeff]"
+            x-data="{ 
+                isMenuOpen: false ,
+            }"
+        >
+            <div>
+                <a href="#" class="text-app-white font-semibold text-2xl"
+                    >sunnyside</a
+                >
+            </div>
+            <div class="h-full md:flex ">
+                <button class="md:hidden" @click="isMenuOpen = !isMenuOpen"  @click.away="isMenuOpen = false">
+                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/ffffff/menu--v6.png" alt="menu--v6"/>
+                </button>
+                <ul 
+                
+                class="absolute -z-10 left-0 right-0 md:static flex flex-col md:flex-row items-center gap-4 [&>li>a]:p-4 bg-[#3dbeff]  transition-all duration-300 overflow-hidden py-12 md:py-0"
+                :class="isMenuOpen ? ' md:p-0 top-20' : '-top-60'"
+               
+                    
+                    
+                    >
+                    <li>
+                        <a href="#" class="text-app-white font-semibold"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" class="text-app-white font-semibold"
+                            >Services</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" class="text-app-white font-semibold"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="bg-app-white px-4 !py-2 rounded-full hover:bg-opacity-40 hover:shadow-sm transition duration-300 active:scale-95 uppercase"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section
+            id="hero"
+            class="h-[calc(100vh-5rem)] p-4 bg-[url('./mobile/image-header.jpg')] md:bg-[url('./desktop/image-header.jpg')] bg-cover bg-center bg-no-repeat"
+        >
+            <h1
+                class="mt-36 md:mt-40 uppercase font-Fraunces font-extrabold text-app-white text-5xl md:text-7xl tracking-widest text-center"
+            >
+                We are creatives
+            </h1>
+            <div class="mx-auto w-10 mt-40">
+                <img
+                    src="./icon-arrow-down.svg"
+                    alt="arrow_down"
+                    class="animate-bounce"
+                />
+            </div>
+        </section>
+        <section id="first_section" class="flex flex-col-reverse md:flex-row">
+            <div
+                class="md:w-[calc(100vw-50%)] bg-app-white flex flex-col justify-center items-center"
+            >
+                <div class="p-28">
+                    <h3 class="font-Fraunces font-extrabold text-5xl">
+                        Transform your brand
+                    </h3>
+                    <p class="text-app-grayish-blue my-10">
+                        We are a full-service creative agency specializing in
+                        helping brands grow fast. Engage your clients through
+                        compelling visuals that do most of the marketing for
+                        you.
+                    </p>
+                    <a
+                        href="#"
+                        class="uppercase font-Fraunces font-extrabold text-sm highlight-text"
+                        >Learn More</a
+                    >
+                </div>
+            </div>
+            <div
+                class="h-[31rem] md:h-auto md:w-[calc(100vw-50%)] bg-[url('./mobile/image-transform.jpg')] md:bg-[url('./desktop/image-transform.jpg')] bg-cover bg-center bg-no-repeat"
+            >
+                <!-- <img src="./desktop/image-transform.jpg" alt="egg" /> -->
+            </div>
+        </section>
+
+        <section id="secound_section" class="flex flex-col md:flex-row">
+            <div
+                class="h-[31rem] md:h-auto md:w-[calc(100vw-50%)] bg-[url('./mobile/image-stand-out.jpg')] md:bg-[url('./desktop/image-stand-out.jpg')] bg-cover bg-center bg-no-repeat"
+            ></div>
+            <div
+                class="md:w-[calc(100vw-50%)] bg-app-white flex flex-col justify-center items-center"
+            >
+                <div class="p-28">
+                    <h3 class="font-Fraunces font-extrabold text-5xl">
+                        Stand out to the right audience
+                    </h3>
+                    <p class="text-app-grayish-blue my-10">
+                        Using a collaborative formula of designers, researchers,
+                        photographers, videographers, and copywriters, we’ll
+                        build and extend your brand in digital places.
+                    </p>
+                    <a
+                        href="#"
+                        class="uppercase font-Fraunces font-extrabold text-sm highlight-text"
+                        >Learn More</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section id="third_section" class="flex flex-col md:flex-row">
+            <div
+                class=" md:w-[calc(100vw-50%)] h-[35rem] bg-[url('./desktop/image-graphic-design.jpg')] bg-cover bg-center bg-no-repeat text-center flex flex-col justify-end items-center gap-8 p-16"
+            >
+                <h4
+                    class="font-Fraunces font-black text-app-dark-desaturated-cyan text-3xl"
+                >
+                    Graphic Design
+                </h4>
+                <p class="text-app-dark-moderate-cyan">
+                    Great design makes you memorable. We deliver artwork that
+                    underscores your brand message and captures potential
+                    clients’ attention.
+                </p>
+            </div>
+            <div
+                class="h-[31rem] md:h-auto md:w-[calc(100vw-50%)] bg-[url('./desktop/image-photography.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-end items-center gap-8 p-16 text-center"
+            >
+                <h4
+                    class="font-Fraunces font-black text-app-dark-desaturated-cyan text-3xl"
+                >
+                    Photography
+                </h4>
+                <p class="text-app-dark-blue">
+                    Increase your credibility by getting the most stunning,
+                    high-quality photos that improve your business image.
+                </p>
+            </div>
+        </section>
+
+        <section id="testimonial">
+            <div class="bg-app-white p-16 md:p-32 text-center">
+                <h5
+                    class="uppercase text-app-grayish-blue tracking-widest font-Fraunces font-black  text-lg md:text-2xl"
+                >
+                    Client testimonials
+                </h5>
+                <div class="flex flex-col md:flex-row items-center p-12 gap-8 md:gap-4">
+                    <div
+                        class="max-w-xs flex flex-col justify-center items-center gap-12"
+                    >
+                        <img
+                            src="./image-emily.jpg"
+                            alt="emily"
+                            class="w-20 h-20 rounded-full"
+                        />
+                        <p class="text-app-dark-grayish-blue">
+                            We put our trust in Sunnyside and they delivered,
+                            making sure our needs were met and deadlines were
+                            always hit.
+                        </p>
+                        <div>
+                            <h6 class="font-Fraunces font-black text-lg">
+                                Emily R.
+                            </h6>
+                            <p class="text-app-grayish-blue">
+                                Marketing Director
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-xs flex flex-col justify-center items-center gap-12"
+                    >
+                        <img
+                            src="./image-thomas.jpg"
+                            alt="thomas"
+                            class="w-20 h-20 rounded-full"
+                        />
+                        <p class="text-app-dark-grayish-blue">
+                            We put our trust in Sunnyside and they delivered,
+                            making sure our needs were met and deadlines were
+                            always hit.
+                        </p>
+                        <div>
+                            <h6 class="font-Fraunces font-black text-lg">
+                                Thomas S.
+                            </h6>
+                            <p class="text-app-grayish-blue">
+                                Chief Operating Officer
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-xs flex flex-col justify-center items-center gap-12"
+                    >
+                        <img
+                            src="./image-jennie.jpg"
+                            alt="jennie"
+                            class="w-20 h-20 rounded-full"
+                        />
+                        <p class="text-app-dark-grayish-blue">
+                            We put our trust in Sunnyside and they delivered,
+                            making sure our needs were met and deadlines were
+                            always hit.
+                        </p>
+                        <div>
+                            <h6 class="font-Fraunces font-black text-lg">
+                                Jennie F.
+                            </h6>
+                            <p class="text-app-grayish-blue">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex">
+            <div class="md:flex">
+                <div >
+                    <img 
+                        class="hidden md:block"
+                        src="./desktop/image-gallery-milkbottles.jpg"
+                        alt="milkbottles"
+                    />
+                    <img
+                        class="md:hidden"
+                        src="./mobile/image-gallery-milkbottles.jpg"
+                        alt="milkbottles"
+                    />
+                </div>
+                <div>
+                    <img class="hidden md:block" src="./desktop/image-gallery-orange.jpg" alt="orange" />
+                    <img class="md:hidden" src="./mobile/image-gallery-orange.jpg" alt="orange" />
+                </div>
+            </div>
+            <div class="md:flex">
+                <div>
+                    <img class="hidden md:block" src="./desktop/image-gallery-cone.jpg" alt="cone" />
+                    <img class="md:hidden" src="./mobile/image-gallery-cone.jpg" alt="cone" />
+                </div>
+                <div>
+                    <img 
+                        class="hidden md:block"
+                        src="./desktop/image-gallery-sugarcubes.jpg"
+                        alt="sugerblocks"
+                    />
+                    <img 
+                        class="md:hidden"
+                        src="./mobile/image-gallery-sugar-cubes.jpg"
+                        alt="sugerblocks"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-teal-200 p-8 flex flex-col items-center gap-8">
+            <h2 class="font-semibold text-2xl text-app-dark-desaturated-cyan">
+                sunnyside
+            </h2>
+            <ul class="flex gap-4 [&>li>a]:px-4 py-3 text-app-dark-moderate-cyan">
+                <li><a href="#"> About </a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+            <ul class="flex gap-8">
+                <li><a href="#">
+                    <img src="./icon-facebook.svg" alt="facebook"></a></li>
+                </a></li>
+                <li>
+                    <a href="#">
+                        <img src="./icon-instagram.svg" alt="instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./icon-twitter.svg" alt="twitter" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./icon-pinterest.svg" alt="pinterest" />
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        </main>
+
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
